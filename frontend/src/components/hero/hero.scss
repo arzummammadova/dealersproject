@@ -1,0 +1,90 @@
+.col-6{
+    figure{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hero .row .col-5{
+    button{
+        margin-right: 10px;
+    }
+    
+    // max-width: 600px;
+    // margin: 0 auto;
+    padding-top: 10rem;
+    text-align: center;
+    h1{
+        font-size: 60px;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-weight: 700;
+    }
+    .desc{
+        font-size: 15px;
+    }
+    .price-text{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        .price{
+            font-size: 30px;
+            color: black;
+            font-weight: 500;
+        }
+        span{
+            color: grey;
+            font-size: 30px;
+            font-weight: 500;
+            text-decoration: line-through;
+        }
+    
+    }
+
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.blue{
+    border: 1px solid #207dff;
+    color: #207dff;
+    background-color: transparent;
+    &:hover{
+        background-color: #207dff;
+        color: white;
+        transition: all 0.3s;
+
+    }
+
+
+}
+
+.classblue{
+    background-color: #207dff;
+    color: white;
+    border: 1px solid #207dff;
+}
+
+
+
+@media (max-width:756px) {
+
+    .hero .row .col-5 h1 {
+      font-size: 30px;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      font-weight: 400;
+  }.hero .row .col-5 .price-text span{
+    font-size: 14px;
+  }
+    
+  .hero .row .col-5 .price-text .price {
+    font-size: 15px;
+    color: black;
+    font-weight: 500;
+  }
+  }
