@@ -7,8 +7,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 
 import './navbar.scss'
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+    const basket=useSelector((state)=>state.basket.basket)|| []
+    const count=basket.reduce((sum,product)=>sum+product.count,0)
     return (
         <>
             <section id='nav'>
@@ -21,8 +24,8 @@ const Navbar = () => {
                             <ul>
                                 <li><Link to='/'>Home</Link></li>
                                 <li><Link to='/admin'>Admin</Link></li>
-                                <li><Link to='/'>Home</Link></li>
-                                <li><Link to='/'>Home</Link></li>
+                                <li><Link to='/basket'>Baske</Link></li>
+                                <li><Link to='/wishlist'>Wishlist</Link></li>
                             </ul>
                         </div>
                        
@@ -30,9 +33,11 @@ const Navbar = () => {
                             <ul>
                                 <li><Link to='/'><CiSearch />
                                 </Link></li>
-                                <li><Link to='/'><CiHeart />
+                                <li><Link to='/wishlist'><CiHeart />
                                 </Link></li>
-                                <li><Link to='/'><FaBasketShopping />
+                                <li><Link to='/basket'><FaBasketShopping />
+                                <sup style={{color:"red"}}>{count}</sup>
+                                
                                 </Link></li>
                             </ul>
                         </div>

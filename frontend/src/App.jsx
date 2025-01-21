@@ -4,6 +4,8 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import NotFoundPage from './pages/notfoundpage/NotFoundPage';
 import Admin from './pages/admin/Admin';
+import Basket from './pages/Basket';
+import Wishlist from './pages/Wishlist';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -16,6 +18,15 @@ const router = createBrowserRouter([
       {
         path:"/admin",
         element:<Admin/>,
+      }
+      ,
+      {
+        path:"/basket",
+        element:<Basket/>,
+      },
+      {
+        path:"/wishlist",
+        element:<Wishlist/>,
       }
      
     ],
